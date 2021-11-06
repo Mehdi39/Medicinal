@@ -1,0 +1,10 @@
+[{"id":1,"product_name":"Elaina","type":"Crime|Thriller","company_name":"Wehner, Mraz and Buckridge","price":97,"in_stock":30,"generic":"Suzuki","mg":319,"img":"http://dummyimage.com/200x200.png/dddddd/000000"},
+{"id":2,"product_name":"Marius","type":"Animation|Comedy|Sci-Fi","company_name":"Bauch-Gusikowski","price":38,"in_stock":88,"generic":"Hyundai","mg":383,"img":"http://dummyimage.com/200x200.png/5fa2dd/ffffff"},
+{"id":3,"product_name":"Junette","type":"Comedy|Drama|Sci-Fi","company_name":"Carroll, Hilll and Krajcik","price":91,"in_stock":87,"generic":"Chevrolet","mg":126,"img":"http://dummyimage.com/200x200.png/5fa2dd/ffffff"},
+{"id":4,"product_name":"Nadine","type":"Comedy|Drama|Romance","company_name":"Hammes Group","price":63,"in_stock":65,"generic":"Mazda","mg":177,"img":"http://dummyimage.com/200x200.png/cc0000/ffffff"},
+{"id":5,"product_name":"Tilda","type":"Comedy|Drama","company_name":"Erdman, Leuschke and Gutmann","price":41,"in_stock":52,"generic":"Ford","mg":605,"img":"http://dummyimage.com/200x200.png/cc0000/ffffff"},
+{"id":6,"product_name":"Salvador","type":"Drama","company_name":"Krajcik, Murray and Doyle","price":37,"in_stock":32,"generic":"Nissan","mg":611,"img":"http://dummyimage.com/200x200.png/ff4444/ffffff"},
+{"id":7,"product_name":"Mano","type":"Comedy","company_name":"Kihn, Herzog and Konopelski","price":15,"in_stock":85,"generic":"Lexus","mg":21,"img":"http://dummyimage.com/200x200.png/dddddd/000000"},
+{"id":8,"product_name":"Ignatius","type":"Action|Drama|Musical","company_name":"Yundt, Thompson and Okuneva","price":25,"in_stock":90,"generic":"Acura","mg":381,"img":"http://dummyimage.com/200x200.png/5fa2dd/ffffff"},
+{"id":9,"product_name":"Verena","type":"Comedy|Romance","company_name":"Schiller LLC","price":27,"in_stock":60,"generic":"Hummer","mg":288,"img":"http://dummyimage.com/200x200.png/5fa2dd/ffffff"},
+{"id":10,"product_name":"Abbie","type":"Action|Crime|Drama|Thriller","company_name":"McLaughlin Inc","price":78,"in_stock":71,"generic":"BMW","mg":248,"img":"http://dummyimage.com/200x200.png/5fa2dd/ffffff"}]
