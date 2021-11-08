@@ -4,15 +4,19 @@ import Doctor from '../Home/Doctor';
 import Medicine from '../Home/Medicine';
 
 const Services = () => {
+
+    // managing states of medicines/doctors
     const [medicines, setMedicines] = useState([])
     const [doctors, setDoctors] = useState([])
 
+    // fetching data for medicne information
     useEffect(() => {
         fetch("./medicine.json")
             .then(res => res.json())
             .then(data => setMedicines(data))
     }, [])
 
+    // fetching data for doctors information
     useEffect(() => {
         fetch("./doctors.json")
         .then(res => res.json())

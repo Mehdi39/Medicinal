@@ -3,8 +3,10 @@ import { Row } from 'react-bootstrap';
 import Doctor from '../Home/Doctor';
 
 const Appointment = () => {
+    // managing states of doctors
     const [doctors, setDoctors] = useState([])
 
+    // fetching data for doctors
     useEffect(() => {
         fetch("./doctors.json")
             .then(res => res.json())

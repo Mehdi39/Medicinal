@@ -118,7 +118,10 @@ const data = [
 
 const MedicineDetails = () => {
 
+  // getting route matching id using useParams
   const { id } = useParams();
+
+  // Cheking id matching or not with database
   const medicineData = data.find(data => data.id === id)
 
   return (

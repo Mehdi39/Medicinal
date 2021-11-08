@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, ListGroup, ListGroupItem, Row, Button } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Banner from './Banner';
 import Doctor from './Doctor';
 import Medicine from './Medicine'
-import { Link } from 'react-router-dom';
 import CovidInfo from './CovidInfo';
 import CovidSuggestions from './CovidSuggestions';
 

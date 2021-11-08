@@ -5,19 +5,27 @@ import { Link, useHistory, useLocation } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 
 const Register = () => {
-    const { createUser, signInUsingGoogle, error } = useAuth()
+    const { createUser, signInUsingFacebook, signInUsingGoogle, error } = useAuth()
     const location = useLocation()
     const history = useHistory()
     const redireact_uri = location.state?.from || '/home'
     const { register, handleSubmit, formState: { errors }} = useForm();
 
+    // Register with Mail && Password
     const onSubmit = (data) => {
         createUser(data.email, data.password, data.name, history, redireact_uri);
     }
 
+    // Register with Google 
     const handleGoogleLogin = () => {
         signInUsingGoogle(history, redireact_uri);
     }
+
+    // Register with Facebook
+    const handleFacebookLogin = () => {
+        signInUsingFacebook(history, redireact_uri)
+    }
+
     return (
         <Container>
             <h1>Register Here</h1>
@@ -38,7 +46,8 @@ const Register = () => {
                 <h4>Already Registered ?</h4>
                 <Link to='/login'>Login</Link>
                 <div>---------or----------</div>
-                <button className="btn btn-success" onClick={handleGoogleLogin}>Google Sign In</button>
+                <button className="btn btn-success my-3" onClick={handleGoogleLogin}>Google Sign In</button>
+                <button className="btn btn-primary" onClick={handleFacebookLogin}>Facebook Sign In</button>
             </div>
         </Container>
     );

@@ -33,7 +33,6 @@ const Header = () => {
                             <Nav.Link><Link to="/services" className="text-dark text-decoration-none">Services</Link></Nav.Link>
                             <Nav.Link><Link to="/blog" className="text-dark text-decoration-none">Blog</Link></Nav.Link>
                             <Nav.Link><Link to="/appointment" className="text-dark text-decoration-none">Appointment</Link></Nav.Link>
-                            {/* <Nav.Link as={Link} to='/Login' className="text-dark text-decoration-none">Login</Nav.Link> */}
                         </Nav>
                         <Nav>
                             {

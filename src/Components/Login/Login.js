@@ -12,15 +12,17 @@ const Login = () => {
     const redirect_uri = location.state?.from || '/home';
     const { register, handleSubmit, formState: { errors }} = useForm();
 
-
+    // google sign-in
     const handleGoogleLogin = () => {
         signInUsingGoogle(history, redirect_uri)
     }
 
+    // facebook sign-in
     const handleFacebookLogin = () => {
         signInUsingFacebook(history, redirect_uri)
     }
 
+    // email/password sign-in
     const onSubmit = data => {
         signInUsingEmailPassword(data.email, data.password, history, redirect_uri)
     }
@@ -31,7 +33,7 @@ const Login = () => {
                 <h2>Login</h2>
                 <form className="d-flex flex-column justify-content-center" onSubmit={handleSubmit(onSubmit)}>
                     <input className="" placeholder="Your Email" {...register("email", {required:true})}/>
-                    {errors.email &&  <span>Email is required</span>}
+                    {errors.email &&  <span>Email is required</span>} 
                     <br />
                     <input className="" type="password" placeholder="Password" {...register("password", {required:true})} />
                     {errors.password && <span>Password is required</span>}
