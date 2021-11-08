@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Doctor from '../Home/Doctor';
 
 const Appointment = () => {
@@ -14,13 +14,13 @@ const Appointment = () => {
     }, [])
 
     return (
-        <div>
+        <Container>
             <Row>
                 {
                     doctors.map(doctor => <Doctor key={doctor.id} doctor={doctor}></Doctor>)
                 }
             </Row>
-        </div>
+        </Container>
     );
 };
 
