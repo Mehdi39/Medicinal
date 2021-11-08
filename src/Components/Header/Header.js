@@ -1,14 +1,17 @@
 import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth'
 
 const Header = () => {
+    const { user, logOut } = useAuth();
+    
     return (
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
                     
-                    <Navbar.Brand><Link to="/">Medicinal</Link></Navbar.Brand>
+                    <Navbar.Brand ><Link to="/" className="text-dark text-decoration-none">Medicinal</Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
 
@@ -26,11 +29,24 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link className=""><Link to="/">Home</Link></Nav.Link>
-                            <Nav.Link className=""><Link to="/services">Services</Link></Nav.Link>
-                            <Nav.Link className=""><Link to="/blog">Blog</Link></Nav.Link>
-                            <Nav.Link className=""><Link to="/aboutus">About Us</Link></Nav.Link>
+                            <Nav.Link><Link to="/" className="text-dark text-decoration-none">Home</Link></Nav.Link>
+                            <Nav.Link><Link to="/services" className="text-dark text-decoration-none">Services</Link></Nav.Link>
+                            <Nav.Link><Link to="/blog" className="text-dark text-decoration-none">Blog</Link></Nav.Link>
+                            <Nav.Link><Link to="/appointment" className="text-dark text-decoration-none">Appointment</Link></Nav.Link>
+                            {/* <Nav.Link as={Link} to='/Login' className="text-dark text-decoration-none">Login</Nav.Link> */}
                         </Nav>
+                        <Nav>
+                            {
+                                user.email ? 
+                                <Button className="text-dark text-decoration-none" onClick={logOut} variant="light">
+                                   Logout 
+                                </Button> : 
+                                <Nav.Link className="text-dark text-decoration-none" as={Link} to="/login">
+                                    Sing In
+                                </Nav.Link>
+                            }
+                        </Nav>
+                        <Nav.Link>{user?.displayName}</Nav.Link>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

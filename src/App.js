@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './Components/Home/Home'
@@ -7,27 +7,58 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Services from './Components/Services/Services';
 import Blog from './Components/Blog/Blog';
-import AboutUs from './Components/AboutUs/AboutUs';
+import Appointment from './Components/Appointment/Appointment';
 import Footer from './Components/Footer/Footer';
+import Register from './Components/Register/Register';
+import Login from './Components/Login/Login';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import MedicineDetails from './Components/MedicineDetails/MedicineDetails';
+import AuthProvider from './context/AuthProvider';
+import DoctorAppointment from './Components/DoctorAppointment/DoctorAppointment';
 
 
 
 function App() {
   return (
-    <div className="App">
-    {/* using react router v.6 */}
-      <BrowserRouter>
-        <Header/>
-        <Routes>
-          <Route exact path="/" element={<Home/>}/>
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/services" element={<Services/>}/>
-          <Route path="/blog" element={<Blog/>}/>
-          <Route path="/aboutus" element={<AboutUs/>}/>
-          <Route path="*" element={<PageNotFound/>}/>
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
+    <div>
+      <AuthProvider>
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home/>
+            </Route>
+            <Route path="/home">
+              <Home/>
+            </Route>
+            <PrivateRoute path="/services">
+              <Services/>
+            </PrivateRoute>
+            <PrivateRoute path="/medicine/:id">
+              <MedicineDetails />
+            </PrivateRoute>
+            <PrivateRoute path="/doctor/:id">
+              <DoctorAppointment/>
+            </PrivateRoute>
+            <PrivateRoute path="/blog">
+              <Blog/>
+            </PrivateRoute>
+            <PrivateRoute path="/appointment">
+              <Appointment/>
+            </PrivateRoute>
+            <Route path="/login">
+              <Login/>
+            </Route>
+            <Route path="/register">
+              <Register/>
+            </Route>
+            <Route path="*"> 
+              <PageNotFound/>
+            </Route>
+          </Switch>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
