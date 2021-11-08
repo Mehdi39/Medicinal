@@ -1,41 +1,49 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import BannerImg1 from './BannerImg1.png'
+import BannerImg2 from './BannerImg2.png'
+import BannerImg3 from './BannerImg3.png'
+import BannerImg4 from './BannerImg4.png'
+
 
 const Banner = () => {
     return (
         <div>
             <Carousel>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={5000}>
                     <img
                         className="d-block w-100"
-                        src="https://www.creatopy.com/blog/wp-content/uploads/2016/06/images-for-banner-ads-1024x527.png"
+                        src={BannerImg3}
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={500}>
+                <Carousel.Item interval={5000}>
                     <img
                         className="d-block w-100"
-                        src="https://www.creatopy.com/blog/wp-content/uploads/2016/06/images-for-banner-ads-1024x527.png"
+                        src={BannerImg2}
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item interval={5000}>
                     <img
                         className="d-block w-100"
-                        src="https://www.creatopy.com/blog/wp-content/uploads/2016/06/images-for-banner-ads-1024x527.png"
+                        src={BannerImg1}
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={5000}>
+                    <img
+                        className="d-block w-100"
+                        src={BannerImg4}
+                        alt="Third slide"
+                    />
+                    <Carousel.Caption>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
