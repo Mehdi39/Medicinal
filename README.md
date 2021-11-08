@@ -1,3 +1,18 @@
+# About the Apps
+This is a Healthcare related web apps based on React js and Google Firebase technologies. People can Sign-up/in. Book a Appointment for a Doctor Visit and get necessary Medicines from here. 
+
+## New Features coming soon
+1. Ambulance Services
+2. Live Video call Dr. checkup.
+3. Dr./patients profile history.
+
+### Things I code with
+
+[![Javascript Badge](https://img.shields.io/badge/-Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)](#)  [![React Badge](https://img.shields.io/badge/-React-61DBFB?style=for-the-badge&labelColor=black&logo=react&logoColor=61DBFB)](#)  [![Nodejs Badge](https://img.shields.io/badge/-Nodejs-3C873A?style=for-the-badge&labelColor=black&logo=node.js&logoColor=3C873A)](#)  [![VSCode Badge](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)](#) [![Git Badge](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](#) 
+
+### Using Firebase Authentication for Login/Sign-up
+### To Host the Apps we use Firebase Hosting - Live Link https://medicinal-33fb2.web.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
